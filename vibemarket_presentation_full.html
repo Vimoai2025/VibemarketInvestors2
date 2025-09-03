@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeMarket - Pitch Deck Inversores - Pre-Seed €200K</title>
+    <!-- Chosen Palette: Vibey Blue & Cyan -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4F46E5, #14B8A6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active {
+            background-color: #eef2ff;
+            color: #4338ca;
+            font-weight: 600;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .roadmap-line {
+            position: absolute;
+            left: 1.25rem;
+            top: 1.25rem;
+            bottom: 1.25rem;
+            width: 2px;
+            background-color: #e5e7eb;
+            z-index: 0;
+        }
+        .roadmap-dot {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <!-- Barra de Navegación Lateral Fija -->
+        <aside class="sticky top-0 h-screen w-64 bg-white border-r border-slate-200 p-6 hidden lg:flex flex-col">
+            <div class="flex items-center gap-2 mb-6">
+                <!-- Logo principal en la barra lateral -->
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/logosinfondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvbG9nb3NpbmZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI1MywiZXhwIjoxODEzMDY2MjUzfQ.DbVtrInIMJBzBUKnkUt6hxseSEd-bFZgM2iKIVYdowU" alt="VibeMarket Logo" class="h-16 w-auto">
+            </div>
+            <nav class="flex-grow">
+                <ul class="space-y-1">
+                    <li><a href="#laura-presentacion" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">👩‍⚕️ Presentación Laura</a></li>
+                    <li><a href="#laura-problemas" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">😤 Problemas Actuales</a></li>
+                    <li><a href="#laura-descubrimiento" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">✨ El Descubrimiento</a></li>
+                    <li><a href="#laura-3minutos" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">⚙️ En 3 Minutos</a></li>
+                    <li><a href="#laura-unmes" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">🚀 En Solo un Mes</a></li>
+                    <li><a href="#laura-resultado" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">🎯 El Resultado</a></li>
+                    <li><a href="#portada" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">🔥 Portada</a></li>
+                    <li><a href="#problema" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">😰 El Problema</a></li>
+                    <li><a href="#solucion" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">🚀 La Solución</a></li>
+                    <li><a href="#funcionamiento" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">⚙️ Cómo Funciona</a></li>
+                    <li><a href="#mercado" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">📈 Mercado</a></li>
+                    <li><a href="#competencia" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">⚔️ Competencia</a></li>
+                    <li><a href="#modelo-negocio" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">💰 Modelo de Negocio</a></li>
+                    <li><a href="#traccion" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">📊 Tracción</a></li>
+                    <li><a href="#proyecciones" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">📈 Proyecciones</a></li>
+                    <li><a href="#uso-fondos" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">🎯 Uso de Fondos</a></li>
+                    <li><a href="#equipo" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">👥 Equipo</a></li>
+                    <li><a href="#roadmap" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">🗺️ Roadmap</a></li>
+                    <li><a href="#vision" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">🌟 Visión</a></li>
+                    <li><a href="#cta" class="nav-link flex items-center gap-3 py-1 px-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">➡️ Call to Action</a></li>
+                </ul>
+            </nav>
+            <div class="mt-auto text-center">
+                <p class="text-xs text-slate-400">© 2025 VibeMarket. Todos los derechos reservados.</p>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="flex-1 overflow-y-auto">
+            
+            <!-- Storytelling Slide 1: Presentación de Laura -->
+            <section id="laura-presentacion" class="py-20 px-8 bg-gradient-to-br from-pink-100 via-white to-purple-100 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto text-center">
+                    <h2 class="text-5xl font-bold mb-6 gradient-text">Conoce a Laura 👩‍⚕️</h2>
+                    <p class="text-xl text-slate-600 max-w-4xl mx-auto mb-16">Una historia real que representa a 2.9M de PYMEs españolas</p>
+                    
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div class="bg-white p-10 rounded-2xl shadow-xl">
+                            <div class="w-32 h-32 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-6xl">👩‍⚕️</span>
+                            </div>
+                            <h3 class="text-3xl font-bold text-pink-600 mb-4">Laura González</h3>
+                            <p class="text-lg text-slate-600 mb-4">Fisioterapeuta autónoma en Madrid</p>
+                            <div class="text-left space-y-3">
+                                <p class="flex items-center gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>8 años de experiencia profesional</span>
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Consulta propia en el centro de Madrid</span>
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Buenos clientes, pero necesita crecer</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-8">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+                                <h4 class="font-bold text-xl text-yellow-600 mb-3">Su Reto</h4>
+                                <p class="text-lg text-slate-700">"Sé que necesito marketing para atraer más pacientes, pero no tengo tiempo ni conocimientos para hacerlo bien"</p>
+                            </div>
+                            
+                            <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                                <h4 class="font-bold text-xl text-blue-600 mb-3">Su Situación</h4>
+                                <ul class="space-y-2 text-slate-700">
+                                    <li>• Trabaja 10-12 horas al día</li>
+                                    <li>• No entiende de marketing digital</li>
+                                    <li>• Quiere más pacientes pero no sabe cómo</li>
+                                    <li>• Su presencia online es prácticamente nula</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-lg">
+                                <h4 class="font-bold text-xl text-purple-600 mb-3">Su Objetivo</h4>
+                                <p class="text-lg text-slate-700">Conseguir más clientes sin dedicar horas que no tiene al marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-16">
+                        <a href="#laura-problemas" class="bg-pink-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-pink-700 transition-transform hover:scale-105 shadow-lg text-lg">Ver Sus Intentos Fallidos</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storytelling Slide 2: Problemas con las opciones actuales -->
+            <section id="laura-problemas" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">Los Intentos Fallidos de Laura 😤</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Cada opción la frustró más que la anterior</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-16">
+                        <div class="bg-red-50 border-l-4 border-red-400 p-8 rounded-lg">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="text-4xl">📊</span>
+                                <h3 class="text-2xl font-bold text-red-600">Probó Metricool</h3>
+                            </div>
+                            <p class="text-lg text-slate-700 font-semibold mb-3">Se perdió en dashboards complicados</p>
+                            <div class="space-y-2 text-slate-600">
+                                <p>• "¿Qué significa engagement rate?"</p>
+                                <p>• "¿Cuándo debo publicar?"</p>
+                                <p>• "¿Qué contenido creo?"</p>
+                                <p>• Abandonó a los 3 días</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-50 border-l-4 border-orange-400 p-8 rounded-lg">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="text-4xl">💼</span>
+                                <h3 class="text-2xl font-bold text-orange-600">Pensó en HubSpot</h3>
+                            </div>
+                            <p class="text-lg text-slate-700 font-semibold mb-3">Demasiado caro y complejo</p>
+                            <div class="space-y-2 text-slate-600">
+                                <p>• €50+ al mes mínimo</p>
+                                <p>• Curva de aprendizaje enorme</p>
+                                <p>• Funciones que no necesita</p>
+                                <p>• "Es para empresas grandes, no para mí"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-8 rounded-lg">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="text-4xl">🏢</span>
+                                <h3 class="text-2xl font-bold text-yellow-600">Preguntó a una Agencia</h3>
+                            </div>
+                            <p class="text-lg text-slate-700 font-semibold mb-3">€1,500/mes - Completamente imposible</p>
+                            <div class="space-y-2 text-slate-600">
+                                <p>• Presupuesto familiar mensual: €3,200</p>
+                                <p>• Marketing = 47% de sus ingresos</p>
+                                <p>• "Ni loca pago eso"</p>
+                                <p>• Sin garantías de resultados</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-purple-50 border-l-4 border-purple-400 p-8 rounded-lg">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="text-4xl">📱</span>
+                                <h3 class="text-2xl font-bold text-purple-600">Se Resignó a "Hacerlo Ella"</h3>
+                            </div>
+                            <p class="text-lg text-slate-700 font-semibold mb-3">Publicar en redes cuando podía... sin resultados</p>
+                            <div class="space-y-2 text-slate-600">
+                                <p>• 1 post por semana (si acaso)</p>
+                                <p>• Contenido improvisado</p>
+                                <p>• 0 estrategia</p>
+                                <p>• Resultados: 0 clientes nuevos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-100 p-8 rounded-xl text-center">
+                        <h3 class="text-3xl font-bold mb-4 text-slate-700">El Resultado</h3>
+                        <p class="text-xl text-slate-600 mb-4">"Me sentía completamente perdida y frustrada"</p>
+                        <p class="text-lg text-red-600 font-semibold">Siguió dependiendo del boca a boca - crecimiento limitado</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storytelling Slide 3: El Descubrimiento -->
+            <section id="laura-descubrimiento" class="py-20 px-8 bg-gradient-to-br from-indigo-100 via-white to-teal-100 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto text-center">
+                    <h2 class="text-6xl font-bold mb-8 gradient-text">Entonces Laura Descubre Vibemarket ✨</h2>
+                    <p class="text-2xl text-slate-600 max-w-4xl mx-auto mb-16">Su CMO Virtual que habla su idioma</p>
+                    
+                    <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                        <div class="space-y-8">
+                            <div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-indigo-200">
+                                <h3 class="text-2xl font-bold text-indigo-600 mb-4">Lo Que Encontró Diferente</h3>
+                                <div class="space-y-4 text-left">
+                                    <div class="flex items-start gap-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <p class="text-lg text-slate-700">"Habla como un experto en fisioterapia, no en marketing"</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <p class="text-lg text-slate-700">"No me pide que aprenda nuevas herramientas"</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <p class="text-lg text-slate-700">"Solo me pide 5 minutos de mi tiempo al día"</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <p class="text-lg text-slate-700">"€49/mes - menos que una cena para dos"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-teal-50 border-l-4 border-teal-400 p-6 rounded-lg">
+                                <h4 class="font-bold text-xl text-teal-600 mb-3">Su Reacción</h4>
+                                <p class="text-lg text-slate-700 italic">"Por primera vez, algo que parece hecho para mí. No me juzga por no saber de marketing, simplemente lo hace por mí."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative">
+                            <div class="bg-gradient-to-br from-indigo-500 to-teal-500 p-12 rounded-3xl text-white text-center relative overflow-hidden">
+                                <div class="absolute inset-0 bg-white/10 transform rotate-12"></div>
+                                <div class="relative z-10">
+                                    <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/logosinfondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvbG9nb3NpbmZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI1MywiZXhwIjoxODEzMDY2MjUzfQ.DbVtrInIMJBzBUKnkUt6hxseSEd-bFZgM2iKIVYdowU" alt="VibeMarket Logo" class="h-32 mb-6 mx-auto">
+                                    <h3 class="text-3xl font-bold mb-4">Tu CMO Virtual</h3>
+                                    <p class="text-xl opacity-90">Marketing que habla tu idioma</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-indigo-600 to-teal-600 text-white p-8 rounded-2xl">
+                        <h3 class="text-3xl font-bold mb-4">El Momento Clave</h3>
+                        <p class="text-xl">"Esto no es otra herramienta más - es como tener un experto en marketing trabajando para mí 24/7"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storytelling Slide 4: En 3 minutos... -->
+            <section id="laura-3minutos" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">En Solo 3 Minutos... ⚙️</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Vibemarket transforma completamente el marketing de Laura</p>
+                    
+                    <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">⚙️ Vibemarket analiza su negocio</h3>
+                                    <p class="text-slate-600">Sin cuestionarios complicados. La IA entiende automáticamente que es fisioterapeuta, su ubicación, y sus necesidades específicas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">🧩 Crea una estrategia personalizada</h3>
+                                    <p class="text-slate-600">Específicamente diseñada para fisioterapeutas en Madrid. No marketing genérico, sino estrategia sectorial.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">📋 Le propone 3 pilares básicos</h3>
+                                    <p class="text-slate-600">Todo explicado en lenguaje simple, sin jerga técnica de marketing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-slate-50 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold text-center mb-6">Los 3 Pilares para Laura</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-2xl">📱</span>
+                                        <h4 class="font-bold text-indigo-600">Presencia Digital Constante</h4>
+                                    </div>
+                                    <p class="text-slate-600">Posts automáticos en Instagram y Google My Business con consejos de fisioterapia, ejercicios y testimonios.</p>
+                                </div>
+                                
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-2xl">💌</span>
+                                        <h4 class="font-bold text-teal-600">Relación con Clientes</h4>
+                                    </div>
+                                    <p class="text-slate-600">Emails automáticos con recordatorios de citas, ejercicios personalizados y consejos de rehabilitación.</p>
+                                </div>
+                                
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-2xl">🎯</span>
+                                        <h4 class="font-bold text-cyan-600">Oportunidades Automáticas</h4>
+                                    </div>
+                                    <p class="text-slate-600">Detecta huecos en su calendario y envía campañas automáticas para llenarlos con nuevas citas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 border-2 border-green-200 p-8 rounded-xl text-center">
+                        <h3 class="text-2xl font-bold text-green-600 mb-4">La Reacción de Laura</h3>
+                        <p class="text-lg text-slate-700 italic">"Por primera vez entiendo perfectamente lo que va a pasar con mi marketing. No hay misterios, no hay jerga técnica. Solo resultados claros."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storytelling Slide 5: En solo un mes... -->
+            <section id="laura-unmes" class="py-20 px-8 bg-slate-50 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">En Solo un Mes... 🚀</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Los cambios que Laura nunca imaginó posibles</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                                <span class="text-2xl">🔎</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-green-600 mb-4">Visibilidad Online</h3>
+                            <div class="space-y-3 text-slate-600">
+                                <p>• Aparece en la primera página de Google para "fisioterapeuta Madrid centro"</p>
+                                <p>• Sus posts de Instagram reciben 10x más interacciones</p>
+                                <p>• Google My Business con 15 reseñas nuevas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                                <span class="text-2xl">💡</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Fidelización</h3>
+                            <div class="space-y-3 text-slate-600">
+                                <p>• Sus pacientes reciben recordatorios automáticos</p>
+                                <p>• Emails con ejercicios personalizados</p>
+                                <p>• 85% de sus pacientes reservan cita de seguimiento</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                                <span class="text-2xl">📆</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-purple-600 mb-4">Nuevos Clientes</h3>
+                            <div class="space-y-3 text-slate-600">
+                                <p>• Los huecos en su calendario se llenan automáticamente</p>
+                                <p>• 12 pacientes nuevos este mes</p>
+                                <p>• Sin hacer una sola llamada comercial</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-green-500 to-teal-500 text-white p-8 rounded-xl mb-8 text-center">
+                        <h3 class="text-3xl font-bold mb-4">Los Números Hablan</h3>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div>
+                                <div class="text-4xl font-bold mb-2">+12</div>
+                                <p class="text-lg">Pacientes nuevos</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-bold mb-2">85%</div>
+                                <p class="text-lg">Retención de pacientes</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-bold mb-2">5 min</div>
+                                <p class="text-lg">Tiempo diario invertido</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-center mb-6">Lo Que Dice Laura</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+                                <p class="text-lg text-slate-700 italic mb-3">"Antes"</p>
+                                <p class="text-slate-600">"Estaba estresada por no saber hacer marketing. Dependía solo del boca a boca y estaba estancada."</p>
+                            </div>
+                            <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
+                                <p class="text-lg text-slate-700 italic mb-3">"Ahora"</p>
+                                <p class="text-slate-600">"Mi consulta está prácticamente completa, los pacientes vuelven más y todo funciona automáticamente. Es increíble."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storytelling Slide 6: El Resultado -->
+            <section id="laura-resultado" class="py-20 px-8 bg-gradient-to-br from-green-100 via-white to-teal-100 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto text-center">
+                    <h2 class="text-6xl font-bold mb-8 gradient-text">El Resultado Final 🎯</h2>
+                    <p class="text-2xl text-slate-600 max-w-4xl mx-auto mb-16">3 meses después, la transformación de Laura es total</p>
+                    
+                    <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                        <div class="space-y-8">
+                            <div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-green-200">
+                                <h3 class="text-2xl font-bold text-green-600 mb-6">Resultados Medibles</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                                        <span class="font-semibold">⏱ Tiempo dedicado al marketing:</span>
+                                        <span class="text-green-600 font-bold">5 min/día</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                                        <span class="font-semibold">📈 Crecimiento de clientes:</span>
+                                        <span class="text-green-600 font-bold">+20% en 3 meses</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                                        <span class="font-semibold">💰 Ingresos adicionales:</span>
+                                        <span class="text-green-600 font-bold">+€840/mes</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                                        <span class="font-semibold">📅 Ocupación promedio:</span>
+                                        <span class="text-green-600 font-bold">92%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-8">
+                            <div class="bg-blue-50 border-l-4 border-blue-400 p-8 rounded-lg">
+                                <h3 class="text-2xl font-bold text-blue-600 mb-4">Lo Más Importante</h3>
+                                <p class="text-lg text-slate-700 mb-4">"No siento que use una herramienta de marketing..."</p>
+                                <p class="text-2xl font-bold text-blue-600">"Siento que tengo un CMO Virtual que piensa y ejecuta por mí"</p>
+                            </div>
+                            
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <h3 class="text-xl font-bold mb-4">Testimonial de Laura</h3>
+                                <p class="text-slate-700 italic mb-4">"Vibemarket no me cambió la vida por el marketing que hace, me la cambió porque me devolvió el tiempo y la tranquilidad."</p>
+                                <p class="text-slate-700 italic">"Ahora me dedico a lo que sé hacer: curar a mis pacientes. El resto se hace solo."</p>
+                                <div class="flex items-center justify-center mt-4">
+                                    <div class="flex text-yellow-400">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <span class="ml-2 text-slate-500">5/5 estrellas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-teal-500 text-white p-12 rounded-2xl mb-8">
+                        <h3 class="text-4xl font-bold mb-6">Laura Representa a 2.9M de PYMEs</h3>
+                        <p class="text-xl mb-4">Que necesitan marketing pero no tienen tiempo, conocimientos ni recursos</p>
+                        <p class="text-2xl font-bold">Vibemarket es su solución</p>
+                    </div>
+                    
+                    <div class="mt-16">
+                        <a href="#portada" class="bg-gradient-to-r from-green-600 to-teal-600 text-white font-bold px-12 py-6 rounded-lg hover:shadow-xl transition-all hover:scale-105 text-xl">Ver Cómo Hacemos Esto Posible</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Slide 1: Portada -->
+            <section id="portada" class="relative bg-gradient-to-br from-indigo-100 via-white to-cyan-100 h-screen flex flex-col items-center justify-center text-center p-8">
+                <!-- Logo principal -->
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/logosinfondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvbG9nb3NpbmZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI1MywiZXhwIjoxODEzMDY2MjUzfQ.DbVtrInIMJBzBUKnkUt6hxseSEd-bFZgM2iKIVYdowU" alt="Logo principal de VibeMarket" class="h-64 mb-6 mx-auto">
+                
+                <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-4">Marketing Digital para los que no tienen tiempo, ni saben de marketing</h1>
+                
+                <p class="text-xl md:text-2xl text-slate-700 max-w-4xl mb-6">Tu CMO Virtual con IA que habla tu idioma y entiende tu negocio</p>
+                
+                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg mb-8">
+                    <p class="text-2xl font-bold text-indigo-600 mb-2">Pre-Seed: €200.000 • Beta Q4 2025</p>
+                    <p class="text-lg text-slate-600">Posicionamos Vibemarket como el aliado, no como otra herramienta más</p>
+                </div>
+                
+                <a href="#problema" class="bg-indigo-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105 shadow-lg text-lg">Descubre la Oportunidad</a>
+            </section>
+
+            <!-- Slide 2: El Problema -->
+            <section id="problema" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">Estás Solo Frente al Marketing Digital</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">La soledad digital que enfrentan 2.9M de PYMEs españolas</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-16">
+                        <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold text-red-600 mb-3">💔 Pain Point 1</h3>
+                            <p class="text-lg text-slate-700 font-semibold mb-2">No tienes tiempo ni conocimientos</p>
+                            <p class="text-slate-600">97.87% PYMEs sin automation. Solo 2.13% de PYMEs españolas usan marketing automation</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold text-orange-600 mb-3">🤯 Pain Point 2</h3>
+                            <p class="text-lg text-slate-700 font-semibold mb-2">Las soluciones están dispersas</p>
+                            <p class="text-slate-600">Y son incomprensibles. Necesitas 5+ herramientas diferentes para hacer marketing básico</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold text-yellow-600 mb-3">💸 Pain Point 3</h3>
+                            <p class="text-lg text-slate-700 font-semibold mb-2">Las agencias cobran €1,000-3,000/mes</p>
+                            <p class="text-slate-600">Completamente inaccesible para la mayoría de PYMEs españolas</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold text-purple-600 mb-3">😵 Pain Point 4</h3>
+                            <p class="text-lg text-slate-700 font-semibold mb-2">Los que lo intentan, lo hacen sin estrategia</p>
+                            <p class="text-slate-600">= esfuerzo perdido, frustración y abandono del marketing digital</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-100 p-8 rounded-xl mb-8">
+                        <h3 class="text-3xl font-bold text-center mb-4">Contexto Kit Digital</h3>
+                        <p class="text-lg text-center text-slate-600">€1.9 mil millones distribuidos a 460,000+ PYMEs pero aún buscan soluciones integrales que realmente funcionen</p>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="problemChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: La Solución -->
+            <section id="solucion" class="py-20 px-8 bg-slate-50 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">Vibemarket: Marketing que Habla Tu Idioma</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Tu estratega personal que automatiza todo el marketing mientras tú te centras en tu negocio</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                                <span class="text-2xl">📱</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">Pilar 1: Presencia Digital Constante</h3>
+                            <p class="text-slate-600">Contenido IA para redes sociales + Google My Business. Siempre visible, siempre profesional.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                                <span class="text-2xl">💌</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-teal-600 mb-4">Pilar 2: Relación con Clientes</h3>
+                            <p class="text-slate-600">Email marketing que nutre y fideliza. Convierte leads en clientes recurrentes.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
+                                <span class="text-2xl">🎯</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-cyan-600 mb-4">Pilar 3: Oportunidades Automáticas</h3>
+                            <p class="text-slate-600">Calendar Gap Filling - detecta huecos en tu agenda y genera ingresos automáticamente.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-500 to-teal-500 text-white p-8 rounded-xl text-center mb-8">
+                        <h3 class="text-3xl font-bold mb-4">Diferenciador Clave</h3>
+                        <p class="text-xl">"No vendemos herramientas, proporcionamos estrategia + ejecución"</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <p class="text-lg text-center text-slate-700"><strong>Inspiración:</strong> Siguiendo el modelo de ConvertKit (€5K a €36.4M ARR) y ActiveCampaign (13 años bootstrap a €250M+ ARR)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Cómo Funciona -->
+            <section id="funcionamiento" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">De Cero a Marketing Profesional en 3 Minutos</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Proceso simplificado que cualquier PYME puede seguir</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Onboarding inteligente</h3>
+                                    <p class="text-slate-600">IA analiza tu negocio automáticamente</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Estrategia personalizada</h3>
+                                    <p class="text-slate-600">3 pilares adaptados a tu sector específico</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Ejecución automática</h3>
+                                    <p class="text-slate-600">Tú solo apruebas, 5 min/día máximo</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-indigo-50 to-teal-50 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold text-center mb-6">Resultado Final</h3>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold gradient-text mb-2">Marketing 24/7</div>
+                                <p class="text-lg text-slate-600 mb-4">sin ser experto</p>
+                                <div class="bg-white p-4 rounded-lg">
+                                    <p class="text-sm text-slate-500">Benchmark: Conversiones freemium del</p>
+                                    <p class="text-2xl font-bold text-teal-600">4-8%</p>
+                                    <p class="text-sm text-slate-500">vs 2-5% promedio SaaS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Mercado -->
+            <section id="mercado" class="py-20 px-8 bg-slate-50 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">2.84M de Negocios Esperando la Solución Correcta</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Una oportunidad masiva con timing perfecto</p>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="text-3xl font-bold text-indigo-600 mb-2">€260M</div>
+                            <p class="font-semibold text-slate-700">TAM España</p>
+                            <p class="text-sm text-slate-500">2.9M PYMEs × €90 ARPU</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="text-3xl font-bold text-teal-600 mb-2">€4.66B</div>
+                            <p class="font-semibold text-slate-700">Kit Digital Total</p>
+                            <p class="text-sm text-slate-500">€1.9B ya distribuidos</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="text-3xl font-bold text-cyan-600 mb-2">44.7%</div>
+                            <p class="font-semibold text-slate-700">Madrid + Barcelona</p>
+                            <p class="text-sm text-slate-500">Concentración empresas</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">23%</div>
+                            <p class="font-semibold text-slate-700">Crecimiento LatAm</p>
+                            <p class="text-sm text-slate-500">vs 17% global</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold text-center mb-6">Timing Perfecto</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl">🤖</span>
+                                </div>
+                                <h4 class="font-bold mb-2">IA Mainstream</h4>
+                                <p class="text-sm text-slate-600">Reduciendo barreras técnicas</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl">🔒</span>
+                                </div>
+                                <h4 class="font-bold mb-2">GDPR Compliance</h4>
+                                <p class="text-sm text-slate-600">Ventaja competitiva local</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl">🎯</span>
+                                </div>
+                                <h4 class="font-bold mb-2">Gap Competitivo</h4>
+                                <p class="text-sm text-slate-600">Entre básico y caro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white p-6 rounded-xl text-center">
+                        <h3 class="text-2xl font-bold mb-2">Expansión LatAm</h3>
+                        <p class="text-lg">Mercado SaaS €46B para 2027 - oportunidad de escalabilidad global</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Competencia -->
+            <section id="competencia" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">El Gap Perfecto</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Entre lo básico local y lo caro internacional</p>
+                    
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full text-left border-collapse bg-white rounded-xl shadow-lg overflow-hidden">
+                            <thead>
+                                <tr class="bg-slate-100">
+                                    <th class="py-4 px-6 font-bold text-slate-700">Competidor</th>
+                                    <th class="py-4 px-6 font-bold text-slate-700">Precio</th>
+                                    <th class="py-4 px-6 font-bold text-slate-700">Debilidad</th>
+                                    <th class="py-4 px-6 font-bold text-slate-700">Ventaja Vibemarket</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="py-4 px-6 font-semibold">CEREBELUS</td>
+                                    <td class="py-4 px-6 text-yellow-600">€9.99/mes</td>
+                                    <td class="py-4 px-6 text-red-600">Muy nuevo, sin tracción</td>
+                                    <td class="py-4 px-6 text-green-600">Tracción validada + IA superior</td>
+                                </tr>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="py-4 px-6 font-semibold">Acumbamail</td>
+                                    <td class="py-4 px-6 text-yellow-600">€22-91/mes</td>
+                                    <td class="py-4 px-6 text-red-600">Solo email marketing</td>
+                                    <td class="py-4 px-6 text-green-600">Solución integral 360°</td>
+                                </tr>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="py-4 px-6 font-semibold">HubSpot</td>
+                                    <td class="py-4 px-6 text-red-600">€50-1,757/mes</td>
+                                    <td class="py-4 px-6 text-red-600">Prohibitivo para PYMEs</td>
+                                    <td class="py-4 px-6 text-green-600">Pricing accesible</td>
+                                </tr>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="py-4 px-6 font-semibold">Mailchimp</td>
+                                    <td class="py-4 px-6 text-yellow-600">€10+/mes</td>
+                                    <td class="py-4 px-6 text-red-600">Problemas GDPR, escala caro</td>
+                                    <td class="py-4 px-6 text-green-600">GDPR nativo + precio fijo</td>
+                                </tr>
+                                <tr class="bg-indigo-50">
+                                    <td class="py-4 px-6 font-bold text-indigo-600">Vibemarket</td>
+                                    <td class="py-4 px-6 font-bold text-indigo-600">€49/mes</td>
+                                    <td class="py-4 px-6 font-bold text-indigo-600">El punto dulce</td>
+                                    <td class="py-4 px-6 font-bold text-indigo-600">Valor/precio/compliance</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-8 rounded-xl text-center">
+                        <h3 class="text-2xl font-bold mb-4">Nuestra Ventaja Competitiva</h3>
+                        <p class="text-lg">Localización profunda + estrategia integral vs herramientas fragmentadas</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Modelo de Negocio -->
+            <section id="modelo-negocio" class="py-20 px-8 bg-slate-50 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">Simple, Asequible y con Valor Claro</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">SaaS escalable con unit economics superiores al sector</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-indigo-200 transition-colors">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold mb-4">Starter</h3>
+                                <div class="text-4xl font-bold text-indigo-600 mb-2">€29</div>
+                                <p class="text-slate-500 mb-6">/mes por PYME</p>
+                                <ul class="space-y-2 text-left">
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Presencia básica
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> 30 posts/mes
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> 2 redes sociales
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-xl border-2 border-indigo-500 transform scale-105">
+                            <div class="text-center">
+                                <div class="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-4">POPULAR</div>
+                                <h3 class="text-2xl font-bold mb-4">Premium</h3>
+                                <div class="text-4xl font-bold text-indigo-600 mb-2">€49</div>
+                                <p class="text-slate-500 mb-6">/mes por PYME</p>
+                                <ul class="space-y-2 text-left">
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Solución completa
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Email marketing
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Calendar filling
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Campañas IA
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-teal-200 transition-colors">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                                <div class="text-4xl font-bold text-teal-600 mb-2">€149</div>
+                                <p class="text-slate-500 mb-6">/mes por PYME</p>
+                                <ul class="space-y-2 text-left">
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Multi-marca
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Personalización
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="text-green-500">✓</span> Soporte prioritario
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-3xl font-bold text-center mb-8">Unit Economics (Basado en Benchmarks Sector)</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="text-center bg-indigo-50 p-6 rounded-lg">
+                                <div class="text-2xl font-bold text-indigo-600">€1,176</div>
+                                <p class="font-semibold">LTV</p>
+                                <p class="text-sm text-slate-500">€49 ARPU × 24 meses</p>
+                            </div>
+                            <div class="text-center bg-teal-50 p-6 rounded-lg">
+                                <div class="text-2xl font-bold text-teal-600">€147</div>
+                                <p class="font-semibold">CAC</p>
+                                <p class="text-sm text-slate-500">vs €200-600 sector</p>
+                            </div>
+                            <div class="text-center bg-green-50 p-6 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">8x</div>
+                                <p class="font-semibold">Ratio LTV/CAC</p>
+                                <p class="text-sm text-slate-500">vs 4-6x típico</p>
+                            </div>
+                            <div class="text-center bg-purple-50 p-6 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">3 meses</div>
+                                <p class="font-semibold">Payback</p>
+                                <p class="text-sm text-slate-500">target <15 meses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Tracción -->
+            <section id="traccion" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">MVP Funcionando, Primeros Clientes Confirmados</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Validación temprana con tecnología probada</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-16">
+                        <div class="bg-green-50 border-l-4 border-green-400 p-8 rounded-lg">
+                            <h3 class="text-2xl font-bold text-green-600 mb-4">Estado Actual</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-green-500">✅</span>
+                                    <span>MVP 95% completado</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-green-500">✅</span>
+                                    <span>Stack funcional probado</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-green-500">✅</span>
+                                    <span>15 fisioterapeutas confirmados para beta</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-8 rounded-lg">
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Stack Tecnológico</h3>
+                            <div class="space-y-3">
+                                <div><strong>Frontend:</strong> Supabase + React</div>
+                                <div><strong>Automatización:</strong> n8n workflows</div>
+                                <div><strong>IA:</strong> OpenAI + Claude APIs</div>
+                                <div><strong>Integraciones:</strong> Meta, Google, WhatsApp</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-indigo-50 p-8 rounded-xl mb-8">
+                        <h3 class="text-2xl font-bold text-center mb-6">Go-to-Market Strategy</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-indigo-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🏥</div>
+                                <h4 class="font-bold mb-2">Beachhead: Fisioterapeutas</h4>
+                                <p class="text-sm text-slate-600">Nicho específico para validación</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-teal-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">📈</div>
+                                <h4 class="font-bold mb-2">Expansión Vertical</h4>
+                                <p class="text-sm text-slate-600">Escalado a otros sectores</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-cyan-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🚀</div>
+                                <h4 class="font-bold mb-2">Modelo ConvertKit</h4>
+                                <p class="text-sm text-slate-600">Direct sales + migración concierge</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-blue-200 p-6 rounded-xl text-center">
+                        <p class="text-lg text-slate-700"><strong>Inspiración ConvertKit:</strong> Direct sales a nichos específicos, migración concierge, enfoque vertical primero - de €5K a €36.4M ARR</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Proyecciones -->
+            <section id="proyecciones" class="py-20 px-8 bg-slate-50 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">Path Realista hacia €1M ARR</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Basado en benchmarks sector y casos de éxito verificables</p>
+                    
+                    <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                        <div class="chart-container h-96">
+                            <canvas id="arrChart"></canvas>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold mb-4">Año 1: €144K ARR</h3>
+                                <div class="space-y-2">
+                                    <div>240 clientes (€49 ARPU promedio)</div>
+                                    <div class="text-sm text-slate-500">Q4 2025: Beta 15 clientes</div>
+                                    <div class="text-sm text-slate-500">Q4 2026: 240 clientes</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold mb-4">Año 2: €576K ARR</h3>
+                                <div class="space-y-2">
+                                    <div>960 clientes</div>
+                                    <div class="text-sm text-slate-500">Growth rate: 300% YoY</div>
+                                    <div class="text-sm text-slate-500">Benchmark conservador 200-300%</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold mb-4">Año 3: €1.152M ARR</h3>
+                                <div class="space-y-2">
+                                    <div>1,920 clientes</div>
+                                    <div class="text-sm text-slate-500">Growth rate: 100% YoY</div>
+                                    <div class="text-sm text-slate-500">Benchmark realista 75-100%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold text-center mb-6">Métricas Clave (Benchmarks Sector)</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="text-center bg-slate-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-red-600">4%</div>
+                                <p class="font-semibold">Churn Mensual</p>
+                                <p class="text-sm text-slate-500">Sector PYME 3-6%</p>
+                            </div>
+                            <div class="text-center bg-slate-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">108%</div>
+                                <p class="font-semibold">NRR</p>
+                                <p class="text-sm text-slate-500">Target >110% vía expansion</p>
+                            </div>
+                            <div class="text-center bg-slate-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">45%+</div>
+                                <p class="font-semibold">Rule of 40</p>
+                                <p class="text-sm text-slate-500">Target >40%</p>
+                            </div>
+                            <div class="text-center bg-slate-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">Mes 18</div>
+                                <p class="font-semibold">Break-even</p>
+                                <p class="text-sm text-slate-500">85% bootstrapped cerca break-even</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-6 rounded-xl text-center">
+                        <h3 class="text-2xl font-bold mb-2">Timeline Benchmark</h3>
+                        <p class="text-lg">Mailchimp tardó 9 años en introducir freemium, nosotros desde día 1</p>
+                    </div>
+                </div>
+            </section>
+
+                        <!-- Slide 10: Uso de Fondos -->
+            <section id="uso-fondos" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">18 Meses para Product-Market Fit</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">€200K para validar, escalar y preparar Serie A</p>
+                    
+                    <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-16 h-16 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">40%</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Tech (€80K)</h3>
+                                    <p class="text-slate-600">Finalizar producto, integraciones, IA. Infraestructura cloud y APIs de IA.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-16 h-16 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">30%</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Marketing (€60K)</h3>
+                                    <p class="text-slate-600">Validar canales, primeros 300 clientes. CAC target €147 → €60K = 408 clientes adquiridos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-16 h-16 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">30%</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Equipo (€60K)</h3>
+                                    <p class="text-slate-600">Gastos operativos mínimos. Contratación CTO y talento clave.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container h-80">
+                            <canvas id="fundingChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-green-600 mb-4">Objetivo Inmediato</h3>
+                            <p class="text-slate-700">Llegar a Series A con €50K MRR (benchmark mediano €3M ARR para Serie A)</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-blue-600 mb-4">Runway</h3>
+                            <p class="text-slate-700">18 meses hasta break-even siguiendo modelo disciplinado de ActiveCampaign</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Equipo -->
+            <section id="equipo" class="py-20 px-8 bg-slate-50 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">Fundador con Visión, Buscando CTO</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Experiencia complementaria con obsesión por simplificar el marketing para PYMEs</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                            <div class="w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-3xl">👨‍💼</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">Pablo Barranco (CEO)</h3>
+                            <p class="font-semibold text-slate-700 mb-2">10+ años marketing</p>
+                            <p class="text-slate-600">Entiende PYMEs, skills técnicos. Visión estratégica y conocimiento profundo del cliente.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg text-center border-2 border-teal-500">
+                            <div class="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-3xl">👨‍💻</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-teal-600 mb-4">Co-founder técnico</h3>
+                            <p class="font-semibold text-slate-700 mb-2">En búsqueda activa</p>
+                            <p class="text-slate-600">3 candidatos evaluándose. Arquitectura técnica y desarrollo de Vimo IA.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                            <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-3xl">🎯</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-purple-600 mb-4">Advisors</h3>
+                            <p class="font-semibold text-slate-700 mb-2">Red de expertos</p>
+                            <p class="text-slate-600">SaaS y marketing digital. Mentores de la industria estrategia de mercado.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold text-center mb-6">Cultura y Experiencia</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-lg mb-3">Experiencia Relevante</h4>
+                                <ul class="space-y-2 text-slate-600">
+                                    <li>• Startups y agencias previas</li>
+                                    <li>• Automatización de marketing</li>
+                                    <li>• Analítica de datos</li>
+                                    <li>• UX/UI enfocada en simplicidad</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-3">Modelo y Cultura</h4>
+                                <ul class="space-y-2 text-slate-600">
+                                    <li>• Single founder + technical co-founder</li>
+                                    <li>• Éxito ActiveCampaign como inspiración</li>
+                                    <li>• Equipo ágil y enfocado en ejecución</li>
+                                    <li>• Obsesión por democratizar el marketing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-500 to-teal-500 text-white p-6 rounded-xl text-center">
+                        <h3 class="text-2xl font-bold mb-2">Pasión por la IA</h3>
+                        <p class="text-lg">Y su potencial para democratizar el marketing profesional</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Roadmap -->
+            <section id="roadmap" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">De Beta a Líder del Mercado</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Ejecución clara con hitos verificables</p>
+                    
+                    <div class="relative max-w-4xl mx-auto">
+                        <div class="roadmap-line hidden sm:block"></div>
+                        <div class="space-y-12">
+                            <div class="relative flex items-start gap-6">
+                                <div class="h-14 w-20 bg-indigo-600 text-white flex items-center justify-center rounded-full z-10 flex-shrink-0 text-sm font-semibold">Q4 2025</div>
+                                <div class="bg-slate-50 p-6 rounded-lg flex-grow">
+                                    <h4 class="font-bold text-lg mb-2">Beta con fisios</h4>
+                                    <p class="text-slate-600">15 clientes, validación del modelo. Primeros testimonios y casos de éxito iniciales.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="relative flex items-start gap-6">
+                                <div class="h-14 w-20 bg-indigo-600 text-white flex items-center justify-center rounded-full z-10 flex-shrink-0 text-sm font-semibold">Q1 2026</div>
+                                <div class="bg-slate-50 p-6 rounded-lg flex-grow">
+                                    <h4 class="font-bold text-lg mb-2">Apertura 3 verticales</h4>
+                                    <p class="text-slate-600">100 clientes. Expansión más allá de fisioterapeutas hacia otros sectores de servicios.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="relative flex items-start gap-6">
+                                <div class="h-14 w-20 bg-indigo-600 text-white flex items-center justify-center rounded-full z-10 flex-shrink-0 text-sm font-semibold">Q2-Q3 2026</div>
+                                <div class="bg-slate-50 p-6 rounded-lg flex-grow">
+                                    <h4 class="font-bold text-lg mb-2">Scale marketing</h4>
+                                    <p class="text-slate-600">500 clientes. Optimización de canales de adquisición y automatización del onboarding.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="relative flex items-start gap-6">
+                                <div class="h-14 w-20 bg-indigo-600 text-white flex items-center justify-center rounded-full z-10 flex-shrink-0 text-sm font-semibold">Q4 2026</div>
+                                <div class="bg-slate-50 p-6 rounded-lg flex-grow">
+                                    <h4 class="font-bold text-lg mb-2">Series A ready</h4>
+                                    <p class="text-slate-600">€50K MRR. Métricas sólidas para siguiente ronda de financiación.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="relative flex items-start gap-6">
+                                <div class="h-14 w-20 bg-teal-600 text-white flex items-center justify-center rounded-full z-10 flex-shrink-0 text-sm font-semibold">2027</div>
+                                <div class="bg-teal-50 p-6 rounded-lg flex-grow">
+                                    <h4 class="font-bold text-lg mb-2">Expansión LatAm</h4>
+                                    <p class="text-slate-600">México/Brasil - mercados €22B+€9B. Siguiendo modelo Rock Content y Canva.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Visión -->
+            <section id="vision" class="py-20 px-8 bg-slate-50 relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto text-center">
+                    <h2 class="text-6xl font-bold mb-8 gradient-text">El Futuro del Marketing para PYMEs Iberoamericanas</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-16 items-center mb-16">
+                        <div class="text-left">
+                            <div class="bg-red-50 border-l-4 border-red-400 p-8 rounded-lg mb-8">
+                                <h3 class="text-2xl font-bold text-red-600 mb-4">😰 Hoy</h3>
+                                <p class="text-lg text-slate-700">Las PYMEs luchan solas con el marketing digital, sin tiempo, sin conocimientos, sin recursos</p>
+                            </div>
+                            
+                            <div class="bg-green-50 border-l-4 border-green-400 p-8 rounded-lg">
+                                <h3 class="text-2xl font-bold text-green-600 mb-4">🚀 Mañana</h3>
+                                <p class="text-lg text-slate-700">Cada negocio con su estratega IA personal que habla su idioma y entiende su sector</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-xl">
+                            <h3 class="text-3xl font-bold mb-6">Impacto Global</h3>
+                            <div class="space-y-4">
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-indigo-600">2.9M</div>
+                                    <p class="text-slate-600">PYMEs españolas</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-teal-600">€46B</div>
+                                    <p class="text-slate-600">Mercado LatAm 2027</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-purple-600">23%</div>
+                                    <p class="text-slate-600">Crecimiento anual LatAm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-teal-500 text-white p-12 rounded-2xl mb-8">
+                        <h3 class="text-3xl font-bold mb-6">Nuestra Misión</h3>
+                        <p class="text-2xl font-light mb-4">Democratizar el marketing profesional</p>
+                        <p class="text-lg opacity-90">España → LatAm siguiendo modelo de Rock Content y Canva</p>
+                    </div>
+
+                    <div class="text-3xl font-bold text-slate-700 leading-relaxed">
+                        "No vendemos software, eliminamos la barrera entre las PYMés y el crecimiento digital"
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: Call to Action -->
+            <section id="cta" class="py-20 px-8 bg-white relative">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/IconoNoFondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvSWNvbm9Ob0ZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI4MCwiZXhwIjoxODEzMDY2MjgwfQ.BIQPr6l4uwvIo7U46OIv3DsnDgOMpDMNN44fKMHxeA4" alt="VibeMarket Icono" class="absolute top-4 right-4 h-24 w-auto opacity-70">
+                
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-5xl font-bold text-center mb-6 gradient-text">Únete a la Revolución del Marketing Accesible</h2>
+                    <p class="text-xl text-slate-600 text-center max-w-4xl mx-auto mb-16">Ser parte del cambio en cómo 2.9M negocios españolas + mercado LatAm €46B hacen marketing</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-16">
+                        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-6">La Oportunidad</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">💰</span>
+                                    <span><strong>ROI esperado:</strong> 4-12x en 18-24 meses</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">⏰</span>
+                                    <span><strong>Timing perfecto:</strong> Kit Digital + IA + gap competitivo</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">🎯</span>
+                                    <span><strong>Mercado validado:</strong> €1.9B ya distribuidos</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-6">Próximos Hitos</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">🎯</span>
+                                    <span><strong>€10K ARR:</strong> 6-12 meses</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">📈</span>
+                                    <span><strong>€100K ARR:</strong> 12-18 meses</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">🚀</span>
+                                    <span><strong>€1M ARR:</strong> 24-36 meses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-12 rounded-2xl text-center mb-8">
+                        <h3 class="text-4xl font-bold mb-4">Pre-Seed: €200,000</h3>
+                        <p class="text-xl mb-6">18 meses de runway para validar, escalar y preparar Serie A</p>
+                        <div class="text-3xl font-bold mb-2">ROI Proyectado</div>
+                        <div class="text-5xl font-bold mb-4">x3.1 - x6.7</div>
+                        <p class="text-lg opacity-90">(Escenario Base - Optimista)</p>
+                    </div>
+
+                    <div class="bg-white border-2 border-indigo-200 p-8 rounded-xl text-center">
+                        <h3 class="text-2xl font-bold mb-6">Contacto</h3>
+                        <div class="space-y-3 text-xl">
+                            <div class="flex items-center justify-center gap-3">
+                                <span>📧</span>
+                                <a href="mailto:contacto@vibemarket.es" class="text-indigo-600 hover:underline">contacto@vibemarket.es</a>
+                            </div>
+                            <div class="flex items-center justify-center gap-3">
+                                <span>📱</span>
+                                <a href="tel:+34658943293" class="text-indigo-600 hover:underline">+34 658 943 293</a>
+                            </div>
+                            <div class="flex items-center justify-center gap-3">
+                                <span>🌐</span>
+                                <a href="https://www.vibemarket.es" class="text-indigo-600 hover:underline">www.vibemarket.es</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-slate-900 text-white text-center py-20 px-8">
+                <img src="https://ragfwduefjziejvhaxkv.supabase.co/storage/v1/object/sign/appimages/logosinfondo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MWFiYjY1Mi03NThiLTQxMmEtOWM1NC04NzAxOGNmNzZiZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBpbWFnZXMvbG9nb3NpbmZvbmRvLnBuZyIsImlhdCI6MTc1MDg1ODI1MywiZXhwIjoxODEzMDY2MjUzfQ.DbVtrInIMJBzBUKnkUt6hxseSEd-bFZgM2iKIVYdowU" alt="Logo VibeMarket" class="h-32 mb-6 mx-auto">
+                
+                <h2 class="text-4xl font-bold mb-4">¡Gracias por tu tiempo e interés en Vibemarket!</h2>
+                <p class="text-slate-300 max-w-2xl mx-auto mb-8">Esperamos contar contigo para llevar el marketing digital inteligente a cada rincón del tejido empresarial pequeño y mediano en España y LatAm.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-8 justify-center mt-12">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white">2.9M+</div>
+                        <div class="text-slate-300 text-sm">PYMEs en España</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white">€1.152M</div>
+                        <div class="text-slate-300 text-sm">ARR objetivo Año 3</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white">x3.1 - x6.7</div>
+                        <div class="text-slate-300 text-sm">ROI proyectado</div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- DATA ---
+            const financialData = {
+                arr: {
+                    labels: ['Año 0', 'Año 1', 'Año 2', 'Año 3', 'Año 4', 'Año 5'],
+                    data: [0, 0.144, 0.576, 1.152, 1.5, 1.8] // Updated projections
+                },
+                funding: {
+                    labels: ['Tech (€80K)', 'Marketing (€60K)', 'Equipo (€60K)'],
+                    data: [80, 60, 60] // €200K total
+                },
+                problem: {
+                    labels: ['Sin Marketing Automation', 'Con Marketing Automation'],
+                    data: [97.87, 2.13]
+                }
+            };
+            
+            // --- NAVIGATION ---
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('aside .nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const activeId = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${activeId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+            
+            // --- CHARTS ---
+            const ctxArr = document.getElementById('arrChart');
+            if (ctxArr) {
+                new Chart(ctxArr, {
+                    type: 'line',
+                    data: {
+                        labels: financialData.arr.labels,
+                        datasets: [{
+                            label: 'ARR Proyectado (Millones €)',
+                            data: financialData.arr.data,
+                            fill: true,
+                            backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                            borderColor: '#4F46E5',
+                            tension: 0.3,
+                            pointBackgroundColor: '#4F46E5',
+                            pointHoverRadius: 7,
+                            pointRadius: 5
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: { 
+                            y: { 
+                                beginAtZero: true, 
+                                title: { display: true, text: 'Millones de Euros (€)' } 
+                            } 
+                        },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Proyección ARR - Escenario Base Conservador'
+                            }
+                        }
+                    }
+                });
+            }
+            
+            const ctxFunding = document.getElementById('fundingChart');
+            if(ctxFunding) {
+                new Chart(ctxFunding, {
+                    type: 'doughnut',
+                    data: {
+                        labels: financialData.funding.labels,
+                        datasets: [{
+                            label: 'Distribución €200K',
+                            data: financialData.funding.data,
+                            backgroundColor: ['#4F46E5', '#14B8A6', '#8B5CF6'],
+                            borderColor: '#f8fafc',
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Uso de Fondos Pre-Seed €200K'
+                            }
+                        }
+                    }
+                });
+            }
+
+            const ctxProblem = document.getElementById('problemChart');
+            if(ctxProblem) {
+                new Chart(ctxProblem, {
+                    type: 'pie',
+                    data: {
+                        labels: financialData.problem.labels,
+                        datasets: [{
+                            label: 'PYMEs Españolas',
+                            data: financialData.problem.data,
+                            backgroundColor: ['#ef4444', '#10b981'],
+                            borderColor: '#f8fafc',
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Marketing Automation en PYMEs Españolas'
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
